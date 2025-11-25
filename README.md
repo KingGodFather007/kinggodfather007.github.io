@@ -69,8 +69,13 @@ All content is inside `index.html` under:
 🔗 LinkedIn: https://www.linkedin.com/in/sumanshu-sohal-256981130
 🐙 GitHub: https://github.com/sumanshusohal
 
+---
+
+
 ⭐ License
 This project is open-source under the MIT License.
 Feel free to fork or build your own site using this template.
+
+---
 
 Thank you for visiting!
