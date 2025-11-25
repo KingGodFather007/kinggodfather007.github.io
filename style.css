@@ -1,4 +1,16 @@
 :root {
+    --bg: #f3f4f6;
+    --bg-elevated: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --primary: #2563eb;
+    --primary-soft: rgba(37, 99, 235, 0.12);
+    --border-subtle: #e5e7eb;
+    --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.10);
+}
+
+/* We keep light variables for completeness, but site is forced to dark with data-theme="dark" */
+:root[data-theme="dark"] {
     --bg: #020617;
     --bg-elevated: #020617;
     --text: #e5e7eb;
@@ -23,19 +35,16 @@ body {
     line-height: 1.6;
 }
 
-/* Global links */
-
+/* Global link styling - prevents purple visited links */
 a {
     color: var(--primary);
     text-decoration: none;
 }
-
 a:hover {
-    color: #5ea3ff;
+    text-decoration: underline;
 }
-
 a:visited {
-    color: var(--primary); /* no purple visited links */
+    color: var(--primary); /* same as normal → no purple */
 }
 
 /* Hero */
@@ -165,6 +174,8 @@ main {
     font-size: 0.95rem;
 }
 
+/* Grid */
+
 .grid {
     display: grid;
     gap: 14px;
@@ -187,6 +198,8 @@ main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+/* Timeline / Jobs */
 
 .timeline .job + .job {
     margin-top: 10px;
@@ -244,7 +257,7 @@ main {
     box-shadow: 0 16px 32px rgba(15, 23, 42, 0.7);
 }
 
-/* Project & Repo cards */
+/* Project cards */
 
 .pill-card {
     background: rgba(15, 23, 42, 0.95);
@@ -316,25 +329,23 @@ main {
 }
 
 .paper-links {
-    margin: 0;
-    font-size: 0.86rem;
+    margin: 2px 0 0;
+    font-size: 0.9rem;
 }
 
-.paper-link {
+/* Ensure publication/talk links look consistent, not purple */
+.paper-links a {
     color: var(--primary);
     font-weight: 600;
 }
-
-.paper-link:hover {
+.paper-links a:hover {
     text-decoration: underline;
-    color: #5ea3ff;
 }
-
-.paper-link:visited {
+.paper-links a:visited {
     color: var(--primary);
 }
 
-/* Pills list */
+/* Pills (for research interests / certs) */
 
 .pill-list {
     display: flex;
@@ -353,24 +364,61 @@ main {
     background: rgba(15, 23, 42, 0.9);
 }
 
-/* Repos */
+/* Repos – Cyber Gradient Card (Neon Style) */
 
 .repos-grid {
     margin-top: 8px;
 }
 
+/* Neon cyber card just for repos */
+.repo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    padding: 14px 14px 16px;
+    background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.35), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.28), transparent 60%),
+        #020617;
+    border: 1px solid rgba(94, 234, 212, 0.7);
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.3),
+        0 24px 40px rgba(0, 0, 0, 0.85);
+    font-size: 0.9rem;
+}
+
+.repo-card::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0, transparent 60%);
+    opacity: 0.7;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
 .repo-card h3 {
-    margin-bottom: 4px;
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
 }
 
 .repo-card h3 a {
-    color: var(--text);
+    color: #e5e7eb;
     text-decoration: none;
 }
-
 .repo-card h3 a:hover {
-    color: var(--primary);
+    color: #a5b4fc;
     text-decoration: underline;
+}
+
+.repo-card p {
+    margin: 0 0 6px;
+    color: #cbd5f5;
+    font-size: 0.88rem;
+    position: relative;
+    z-index: 1;
 }
 
 .repo-meta {
@@ -378,7 +426,9 @@ main {
     flex-wrap: wrap;
     gap: 8px;
     font-size: 0.8rem;
-    color: var(--muted);
+    color: #a5b4fc;
+    position: relative;
+    z-index: 1;
 }
 
 /* Contact */
