@@ -5,7 +5,7 @@ Welcome to the repository for my personal cybersecurity portfolio website, hoste
 This site serves as a professional hub for:
 - My résumé  
 - Cybersecurity projects  
-- Publications (Pattern Recognition, IJAM)  
+- Publications
 - Talks & presentations  
 - Research interests  
 - Certifications  
@@ -20,19 +20,6 @@ This site serves as a professional hub for:
 
 ---
 
-## 📁 Repository Structure
-
-.
-├── index.html # Main website file
-├── style.css # Complete styling for the site
-├── resume/
-│ └── Sumanshu_Sohal_resume.pdf # My uploaded resume
-└── assets/ # (Optional) images, icons, future assets
-
-yaml
-Copy code
-
----
 
 ## 🌙 Features
 
@@ -65,9 +52,6 @@ Your site will be available at:
 
 https://sumanshusohal.github.io
 
-yaml
-Copy code
-
 ---
 
 ## ✏️ How to Update Content
@@ -77,9 +61,6 @@ Replace the file inside:
 
 /resume/Sumanshu_Sohal_resume.pdf
 
-csharp
-Copy code
-
 ### Edit Publications / Talks  
 All content is inside `index.html` under:
 
@@ -87,16 +68,12 @@ All content is inside `index.html` under:
 Customize GitHub Repo Display
 The auto-fetch script uses:
 
-ruby
-Copy code
 https://api.github.com/users/sumanshusohal/repos
 Edit in index.html if needed.
 
 🧪 Local Preview (Optional)
 If you want to test it locally:
 
-sql
-Copy code
 Right click → Open With → Browser
 No frameworks, no Jekyll needed (pure HTML/CSS/JS).
 
